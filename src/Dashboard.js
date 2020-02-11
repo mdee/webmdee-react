@@ -175,7 +175,7 @@ const Dashboard = () => {
   function fetchData() {
     setLoading(true);
     const urlParams = memoizedUrlParameters();
-    axios.get('http://bernie-ads-backend.herokuapp.com/api/date_ads_metadata/?'+urlParams).then(({ data: adDateData }) => {
+    axios.get('https://bernie-ads-backend.herokuapp.com/api/date_ads_metadata/?'+urlParams).then(({ data: adDateData }) => {
       const chartDates = adDateData.map((date, index) => {
         let d = {dateString: chartTimeFormat(new Date(date.date))};
         date.spend_ranges.forEach(sr => {
@@ -196,7 +196,7 @@ const Dashboard = () => {
     });
     if (fetchIndividualDonations) {
       let noDonationsFound = true;
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/date_donations_metadata/?'+urlParams).then(({ data }) => {
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/date_donations_metadata/?'+urlParams).then(({ data }) => {
         const donationData = data.map((d) => {
           if (d.count > 0) {
             noDonationsFound = false;
@@ -208,7 +208,7 @@ const Dashboard = () => {
       });
     }
     if (fetchAdDetails) {
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams).then(({ data: ads }) => {
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams).then(({ data: ads }) => {
         ads.forEach((a) => {
           a.spend_range = addDollarSign(a.spend_range);
           a.start_date = chartTimeFormat(new Date(a.start_date));
@@ -223,8 +223,8 @@ const Dashboard = () => {
     // Fetch all presidential campaigns
     const urlParams = `?month_delta=${monthDelta}`;
     Promise.allSettled([
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/campaigns/'),
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/date_extent/' + urlParams)
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/campaigns/'),
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/date_extent/' + urlParams)
     ]).then((result) => {
       const campaignData = result[0].value.data;
       const dateData = result[1].value.data;
@@ -236,7 +236,7 @@ const Dashboard = () => {
       setStartDate(dateData.start_date);
       let urlParams = `campaign_name=${defaultLoadedCampaignName}&start_date=${dateData.start_date}&end_date=${dateData.max_date}`;
 
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/date_ads_metadata/?'+urlParams).then(({ data: adDateData }) => {
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/date_ads_metadata/?'+urlParams).then(({ data: adDateData }) => {
         const chartDates = adDateData.map((date, index) => {
           let d = {dateString: chartTimeFormat(new Date(date.date))};
           date.spend_ranges.forEach(sr => {
@@ -256,7 +256,7 @@ const Dashboard = () => {
         setLoading(false);
       });
       let noDonationsFound = true;
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/date_donations_metadata/?'+urlParams).then(({ data }) => {
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/date_donations_metadata/?'+urlParams).then(({ data }) => {
         const donationData = data.map((d) => {
           if (d.count) {
             noDonationsFound = false;
@@ -266,7 +266,7 @@ const Dashboard = () => {
         setNoDonations(noDonationsFound);
         setDonationDataStackedBars(donationData);
       });
-      axios.get('http://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams).then(({ data: ads }) => {
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams).then(({ data: ads }) => {
         ads.forEach((a) => {
           a.spend_range = addDollarSign(a.spend_range);
           a.start_date = chartTimeFormat(new Date(a.start_date));
