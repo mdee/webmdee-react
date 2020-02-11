@@ -3,7 +3,7 @@ import { Grid, Paper, Typography} from '@material-ui/core';
 import './App.css'
 import Dashboard from './Dashboard.js'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -16,7 +16,7 @@ import interactGif from './recording.gif';
 const App = () => {
   return (
     <div>
-      <Router>
+      <Router basename="/" hashType="slash">
         <Switch>
           <Route path="/campaign-data-app">
             <Dashboard />
@@ -97,7 +97,7 @@ const App = () => {
                   <li>On 11/07/19, 106(!) ads began running concurrently, all of them video. He wasn't kidding about using Super PAC dollars!</li>
                 </ul>
                 <p>
-                  This was fun for me to build. The backend is deployed on a free Heroku tier, and the front end is served up via Github Pages. Here's the source code for the <a href="https://github.com/mdee/bernie_backend">backend</a> & frontend.
+                  This was fun for me to build. The backend is deployed on a free Heroku tier, and the front end is served up via Github Pages. Here's the source code for the <a href="https://github.com/mdee/bernie_backend">backend</a> & <a href="https://github.com/mdee/webmdee-react">frontend</a>.
                 </p>
               </Grid>
             </Grid>
