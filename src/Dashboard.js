@@ -266,14 +266,29 @@ const Dashboard = () => {
         setNoDonations(noDonationsFound);
         setDonationDataStackedBars(donationData);
       });
-      axios.get('https://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams).then(({ data: ads }) => {
-        ads.forEach((a) => {
-          a.spend_range = addDollarSign(a.spend_range);
-          a.start_date = chartTimeFormat(new Date(a.start_date));
-          a.end_date = chartTimeFormat(new Date(a.end_date));
+      axios.get('https://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams)
+        .then(({ data: ads }) => {
+          ads.forEach((a) => {
+            a.spend_range = addDollarSign(a.spend_range);
+            a.start_date = chartTimeFormat(new Date(a.start_date));
+            a.end_date = chartTimeFormat(new Date(a.end_date));
+          });
+          setAds(ads);
+        })
+        .catch(() => {
+          // It's possible that the request failed because Heroku is waking up. So, wait a few seconds and try again
+          setTimeout(() => {
+            axios.get('https://bernie-ads-backend.herokuapp.com/api/ads/?'+urlParams)
+              .then(({ data: ads }) => {
+                ads.forEach((a) => {
+                  a.spend_range = addDollarSign(a.spend_range);
+                  a.start_date = chartTimeFormat(new Date(a.start_date));
+                  a.end_date = chartTimeFormat(new Date(a.end_date));
+                });
+                setAds(ads);
+              });
+          }, 3000);
         });
-        setAds(ads);
-      });
 
     });
   },[]);

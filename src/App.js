@@ -94,27 +94,22 @@ const App = () => {
                 <p>
                   When I was thinking about the use case for this app, I imagined a campaign employee wanting to compare ad strategies to the competition. If 2 campaigns are competing for the same voters and 1 is leading, what might the other campaign learn from this public data?</p>
                 <p>For fun, I also added in the ability to see individual donations as reported by the FEC. It's interesting to look at ad surges as well as how each campaign runs a different combination of text, image, and video ads.</p>
-                <p>Here's are a few anecdotes:
+                <p>Here's are a few anecdotes:</p>
                 <ul>
                   <li>Joe Biden announced his campaign for president on 4/25/19. The data shows he immediately began running around ~40 ad campaigns concurrently in the early going, almost all of them inexpensive text ads. As the months continued, that number halved until it dropped to 0 on 10/21/19</li>
                   <li>On 10/24/19, he reversed his earlier position and <a href="https://www.cnn.com/2019/10/23/politics/joe-biden-fundraising-super-pac/index.html">signaled an openness</a> to accepting Super PAC support</li>
                   <li>On 10/25/19, a Super PAC <a href="https://www.cnn.com/2019/10/29/politics/joe-biden-ally-launches-super-pac/index.html">was formally launched</a> to support him</li>
                   <li>On 11/07/19, 106(!) ads began running concurrently, all of them video. He wasn't kidding about using Super PAC dollars!</li>
                 </ul>
-                </p>
-                <p>
-                  <ul>
-                    <li>Pete Buttigieg has been running <b>a lot</b> of ad campaigns.</li>
-                    <li>In the fall he was running hundreds of campaigns concurrently, and once November hit that number steadily rose to more than 1000, which continued for the rest of the year</li>
-                  </ul>
-                </p>
-                <p>
-                  <ul>
-                    <li>
-                      <li>Nobody touched Bernie Sanders when it came to individual donations (unsurprisingly)</li>
-                    </li>
-                  </ul>
-                </p>
+                <br/>
+                <ul>
+                  <li>Pete Buttigieg has been running <b>a lot</b> of ad campaigns.</li>
+                  <li>In the fall he was running hundreds of campaigns concurrently, and once November hit that number steadily rose to more than 1000, which continued for the rest of the year</li>
+                </ul>
+                <br/>
+                <ul>
+                  <li>Nobody touched Bernie Sanders when it came to individual donations (unsurprisingly)</li>
+                </ul>
                 <p>
                   This was fun for me to build. React seems like a powerful way to build highly interactive apps, and I forgot how much fun it can be to build stuff for the web.</p>
                 <p>
