@@ -103,7 +103,7 @@ const Dashboard = () => {
   const [minDate, setMinDate] = useState('');
   const [maxDate, setMaxDate] = useState('');
   // Boolean to show the spend range of ads (as bars)
-  const [showSpendRanges, setShowSpendRanges] = useState(true);
+  const [showSpendRanges, setShowSpendRanges] = useState(false);
   // Boolean to show the impression range of ads (as bars)
   const [showImpressionRanges, setShowImpressionRanges] = useState(false);
   // Boolean to show ad types (as area)

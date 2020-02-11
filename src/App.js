@@ -73,6 +73,17 @@ const App = () => {
                   <li><a target="_blank" rel="noopener noreferrer" href="https://d3js.org/">d3</a> (scale, scale-chromatic, time, time-format)</li>
                   <li><a target="_blank" rel="noopener noreferrer" href="https://www.postgresql.org/">Postgre SQL</a></li>
                 </ul>
+                <p>
+                  In order to get the data manageable for Django, I created models for the ads, donations, and presidential campaigns. Ads belong to a campaign, and donations are also tied to a campaign.
+                </p>
+                <p>The tool allows you to explore how many Google ad campaigns each of the 6 major Democratic candidates have been running this election cycle. Each ad has the following attributes:</p>
+                <ul>
+                  <li>A spend range (less than $100, $100 - $1000, etc.)</li>
+                  <li>An impressions range (10K, 1M, etc.)</li>
+                  <li>A date range during which it was served</li>
+                  <li>The type of ad it was (text, image, video)</li>
+                  <li>A URL to see the ad</li>
+                </ul>
               </Grid>
               <Grid item xs={12} sm={4}>
                 <div style={{textAlign: 'center'}}>
@@ -80,25 +91,38 @@ const App = () => {
                 </div>
               </Grid>
               <Grid item xs={12} sm={4}>
-                <div>The tool allows you to explore how many Google ad campaigns each of the 6 major Democratic candidates have been running this election cycle. Each ad has the following attributes:</div>
-                <ul>
-                  <li>A spend range (less than $100, $100 - $1000, etc.)</li>
-                  <li>An impressions range (10K, 1M, etc.)</li>
-                  <li>A date range during which it was served</li>
-                  <li>The type of ad it was (text, image, video)</li>
-                </ul>
                 <p>
-                  The use case that I had in mind was for somebody who is working on one of these campaigns to be able to compare ad strategies to competitors. For funsies, I also added in the ability to see individual donations as reported by the FEC. It's interesting to look at ad surges as well as how each campaign combines the different kinds of ads. Here's one anecdote:
-                </p>
+                  When I was thinking about the use case for this app, I imagined a campaign employee wanting to compare ad strategies to the competition. If 2 campaigns are competing for the same voters and 1 is leading, what might the other campaign learn from this public data?</p>
+                <p>For fun, I also added in the ability to see individual donations as reported by the FEC. It's interesting to look at ad surges as well as how each campaign runs a different combination of text, image, and video ads.</p>
+                <p>Here's are a few anecdotes:
                 <ul>
                   <li>Joe Biden announced his campaign for president on 4/25/19. The data shows he immediately began running around ~40 ad campaigns concurrently in the early going, almost all of them inexpensive text ads. As the months continued, that number halved until it dropped to 0 on 10/21/19</li>
                   <li>On 10/24/19, he reversed his earlier position and <a href="https://www.cnn.com/2019/10/23/politics/joe-biden-fundraising-super-pac/index.html">signaled an openness</a> to accepting Super PAC support</li>
                   <li>On 10/25/19, a Super PAC <a href="https://www.cnn.com/2019/10/29/politics/joe-biden-ally-launches-super-pac/index.html">was formally launched</a> to support him</li>
                   <li>On 11/07/19, 106(!) ads began running concurrently, all of them video. He wasn't kidding about using Super PAC dollars!</li>
                 </ul>
-                <p>
-                  This was fun for me to build. The backend is deployed on a free Heroku tier, and the front end is served up via Github Pages. Here's the source code for the <a href="https://github.com/mdee/bernie_backend">backend</a> & <a href="https://github.com/mdee/webmdee-react">frontend</a>.
                 </p>
+                <p>
+                  <ul>
+                    <li>Pete Buttigieg has been running <b>a lot</b> of ad campaigns.</li>
+                    <li>In the fall he was running hundreds of campaigns concurrently, and once November hit that number steadily rose to more than 1000, which continued for the rest of the year</li>
+                  </ul>
+                </p>
+                <p>
+                  <ul>
+                    <li>
+                      <li>Nobody touched Bernie Sanders when it came to individual donations (unsurprisingly)</li>
+                    </li>
+                  </ul>
+                </p>
+                <p>
+                  This was fun for me to build. React seems like a powerful way to build highly interactive apps, and I forgot how much fun it can be to build stuff for the web.</p>
+                <p>
+                  In order to get it running online, I deployed the backend code on a free Heroku tier. The front end is packaged up with yarn and then served up via Github Pages.</p>
+                <p>
+                  Here's the source code for the <a href="https://github.com/mdee/bernie_backend">backend</a> & <a href="https://github.com/mdee/webmdee-react">frontend</a>.
+                </p>
+                <p>It's possible that you'll have to disable your ad blocker in order for the app to work properly. Just a heads up.</p>
               </Grid>
             </Grid>
             <Grid container component={Paper} elevation={3} className="webmdee-card">
