@@ -1,25 +1,16 @@
 {
-  "files": {
-    "main.css": "/static/css/main.3391c9cd.chunk.css",
-    "main.js": "/static/js/main.10601e5e.chunk.js",
-    "main.js.map": "/static/js/main.10601e5e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.beb2c1e9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.beb2c1e9.js.map",
-    "static/js/2.0d3b177b.chunk.js": "/static/js/2.0d3b177b.chunk.js",
-    "static/js/2.0d3b177b.chunk.js.map": "/static/js/2.0d3b177b.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.46c43cc0e735946d71cb8d35656f142c.js": "/precache-manifest.46c43cc0e735946d71cb8d35656f142c.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.3391c9cd.chunk.css.map": "/static/css/main.3391c9cd.chunk.css.map",
-    "static/js/2.0d3b177b.chunk.js.LICENSE": "/static/js/2.0d3b177b.chunk.js.LICENSE",
-    "static/media/campaign-data.gif": "/static/media/campaign-data.9cc1d394.gif",
-    "static/media/recording.gif": "/static/media/recording.62d46780.gif",
-    "static/media/reviewsage.gif": "/static/media/reviewsage.e80803b4.gif"
-  },
-  "entrypoints": [
-    "static/js/runtime-main.beb2c1e9.js",
-    "static/js/2.0d3b177b.chunk.js",
-    "static/css/main.3391c9cd.chunk.css",
-    "static/js/main.10601e5e.chunk.js"
-  ]
+  "main.css": "/static/css/main.7444de33.chunk.css",
+  "main.js": "/static/js/main.444b4d1c.chunk.js",
+  "main.js.map": "/static/js/main.444b4d1c.chunk.js.map",
+  "static/js/1.946fd416.chunk.js": "/static/js/1.946fd416.chunk.js",
+  "static/js/1.946fd416.chunk.js.map": "/static/js/1.946fd416.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/campaign-data.gif": "/static/media/campaign-data.9cc1d394.gif",
+  "static/media/reviewsage.gif": "/static/media/reviewsage.e80803b4.gif",
+  "static/media/recording.gif": "/static/media/recording.62d46780.gif",
+  "static/css/main.7444de33.chunk.css.map": "/static/css/main.7444de33.chunk.css.map",
+  "index.html": "/index.html",
+  "precache-manifest.9ea0f78792c0b1ced947a4e34b41c3ae.js": "/precache-manifest.9ea0f78792c0b1ced947a4e34b41c3ae.js",
+  "service-worker.js": "/service-worker.js"
 }
